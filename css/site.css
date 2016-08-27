@@ -5,6 +5,13 @@ body {
     line-height: 1.5;
 }
 
+main a:hover,
+main a:focus,
+footer a:hover,
+footer a:focus {
+    color: red;
+}
+
 h1,
 h2,
 .subtitulo-principal {
