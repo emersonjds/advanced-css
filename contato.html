@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Contato - João da Silva</title>
+	<link rel="icon" href="imagens/favicon.png">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/site.css">
+	<link rel="stylesheet" href="css/blog.css">
+	<link rel="stylesheet" href="css/contato.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
+</head>
+<body>
+	<main>
+		<h1 class="titulo-principal">Contato</h1>
+		<div class="container">
+			<form>
+				<fieldset>
+					<legend>Dados pessoais</legend>
+					<label for="nome">Nome:</label>
+					<input id="nome" type="text" name="nome"
+					autofocus pattern="[A-Za-z ']{4,}"
+					title="O nome precisa ter pelo menos 4 caracteres" placeholder="seu nome">
+					<label for="email">Email:</label>
+					<input id="email" name="e-mail" placeholder="seu@email.com" type="email" required>
+				</fieldset>
+
+				<fieldset>
+					<select name="assunto">
+						<option value="blog">Blog</option>
+						<option value="servico">Serviço</option>
+						<option value="outro">Outro</option>
+					</select>
+				</fieldset>
+
+				<fieldset>
+					<legend>Dados da Mensagem</legend>
+					<label for="msg"></label>
+					<textarea id="msg" class="mensagemUsuario" cols="30" rows="10"></textarea>
+					<button type="submit">Enviar</button>
+				</fieldset>
+			</form>		
+		</div>
+	</main>
+	<img src="imagens/eu.jpg" alt="Minha foto" class="minha-foto">
+
+	<footer class="rodape-pagina">
+		&copy; João da Silva 2014
+	</footer>
+</body>
+</html>
