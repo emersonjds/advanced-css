@@ -65,3 +65,43 @@
     transform: translateY(.5em) rotate(45deg);
 }
 
+ {
+    background-color: #851944;
+    font-weight: bold;
+}
+
+table {
+     border-spacing: 3px;
+    border-collapse: separate;  
+}
+
+th {
+    background-color: #3C1D3D;
+    color: #fff;
+    font-weight: bold;
+    padding: .5em;
+}
+
+.habilidades {
+    background-color: #851944;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+}
+
+.habilidades [colspan] {
+    text-align: center;
+    font-style: italic;
+}
+
+.habilidades [rowspan] {
+    vertical-align: middle;
+}
+
+tr td {
+    background-color: #EEE;
+    text-align: center;
+    border: 1px solid; 
+    padding: .5em;
+
+}
