@@ -50,3 +50,38 @@ button:hover,
 button:focus {
     background-color: #8C1D3D;
 }
+
+.com-icone {
+    position: relative;
+}
+
+.com-icone::after {
+    content: ''; /*nunca esquecer do content em pseudoclasses*/
+    width: 2em;
+    height: 2em;
+    background-color: #8C1D3D;
+    background-size: 50% 50%; /* para a imagem ter 1em x 1em */
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.com-icone::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.com-icone + input {
+    position: relative;
+    left: 2em;
+    width: calc(100% - 2em);
+}
+
+.com-icone[for="nome"]::after {
+    background-image: url(../imagens/usuario.png);
+}
+
+.com-icone[for="email"]::after {
+    background-image: url(../imagens/email.png);
+}
+
