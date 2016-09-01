@@ -21,12 +21,30 @@
     color: #000;
 }
 .saudacao em {
+    animation: flutua 1s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
     color: #851944;
+    display: inline-block;
     font-size: 4em;
     -webkit-transform: rotate(-5deg) skew(-10deg);
-            transform: rotate(-5deg) skew(-10deg);
-    display: inline-block;
+    transform: rotate(-5deg) skew(-10deg);
+    position: relative;
 }
+
+@keyframes {
+    from {
+        top: -5px;
+    }
+    to {
+        top: 5px;
+    }
+}
+
+.saudacao:hover em {
+    animation-play-state: paused;
+}
+
 .botao-index {
     font-size: 1.25em;
     background-color: #851944;
@@ -37,7 +55,18 @@
     margin: 2em auto;
     display: block;
     text-align: center;
+    text-decoration: none;
+    transition: .5s;
 }
+
+.botao-index:focus,
+.botao-index:hover {
+    background-color: #C54974;
+    color: white;
+    box-shadow: 0 0 1em #FA9;
+}
+
+
 .secao-inicio {
     padding: 2em;
 }
@@ -113,18 +142,27 @@ html,body {
 }
 body {
     -webkit-perspective: 6px;
-            perspective: 6px;
+    perspective: 6px;
     -webkit-perspective-origin: 50% 160px;
-            perspective-origin: 50% 160px;
+    perspective-origin: 50% 160px;
 }
 .palavras-home {
     -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
+    transform-style: preserve-3d;
     position: absolute;
     bottom: 0;
     right: 0;
     top: 0;
     left: 0;
+    -webkit-animation: aparece 2s;
+    animation: aparece 2s;
+}
+
+@keyframes aparece{
+    from {
+        opacity: 0%;
+        transform: scale(0.001);
+    }
 }
 .palavra-home {
     font-family: "Shadows Into Light", cursive;
@@ -133,101 +171,104 @@ body {
     color: rgba(255, 127, 127, .5);
     position: absolute;
 }
+
 .eficiencia {
     top: 50%;
     left: 60%;
     -webkit-transform: translate(-50%, -50%) translateZ(4px) rotate(-5deg) scale(.25);
-            transform: translate(-50%, -50%) translateZ(4px) rotate(-5deg) scale(.25);
+    transform: translate(-50%, -50%) translateZ(4px) rotate(-5deg) scale(.25);
 }
 .boas-praticas {
     top: 70%;
     left: 20%;
     -webkit-transform: translate(-50%, -50%) translateZ(1px) rotate(10deg) scale(.25);
-            transform: translate(-50%, -50%) translateZ(1px) rotate(10deg) scale(.25);
+    transform: translate(-50%, -50%) translateZ(1px) rotate(10deg) scale(.25);
     opacity: .3;
 }
 .codigo-limpo {
     top: 45%;
     left: 25%;
     -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(-10deg) scale(.25);
-            transform: translate(-50%, -50%) translateZ(2px) rotate(-10deg) scale(.25);
+    transform: translate(-50%, -50%) translateZ(2px) rotate(-10deg) scale(.25);
     opacity: .6;
 }
 .css3 {
     top: 55%;
     left: 35%;
     -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(5deg) scale(.25);
-            transform: translate(-50%, -50%) translateZ(2px) rotate(5deg) scale(.25);
+    transform: translate(-50%, -50%) translateZ(2px) rotate(5deg) scale(.25);
     opacity: .6;
 }
 .html5 {
     top: 30%;
     left: 65%;
     -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(10deg) scale(.25);
-            transform: translate(-50%, -50%) translateZ(2px) rotate(10deg) scale(.25);
+    transform: translate(-50%, -50%) translateZ(2px) rotate(10deg) scale(.25);
     opacity: .6;
 }
 .javascript {
     top: 15%;
     left: 60%;
     -webkit-transform: translate(-50%, -50%) translateZ(1px) rotate(-5deg) scale(.25);
-            transform: translate(-50%, -50%) translateZ(1px) rotate(-5deg) scale(.25);
+    transform: translate(-50%, -50%) translateZ(1px) rotate(-5deg) scale(.25);
 }
 .acessibilidade {
     top: 30%;
     left: 35%;
     -webkit-transform: translate(-50%, -50%) translateZ(3px) rotate(-5deg) scale(.25);
-            transform: translate(-50%, -50%) translateZ(3px) rotate(-5deg) scale(.25);
+    transform: translate(-50%, -50%) translateZ(3px) rotate(-5deg) scale(.25);
     opacity: .8;
 }
 .responsivo {
     top: 40%;
     left: 40%;
     -webkit-transform: translate(-50%, -50%) translateZ(3px) rotate(10deg) scale(.25);
-            transform: translate(-50%, -50%) translateZ(3px) rotate(10deg) scale(.25);
+    transform: translate(-50%, -50%) translateZ(3px) rotate(10deg) scale(.25);
     opacity: .8;
 }
 .otimizacoes {
     top: 70%;
     left: 65%;
     -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(-5deg) scale(.25);
-            transform: translate(-50%, -50%) translateZ(2px) rotate(-5deg) scale(.25);
+    transform: translate(-50%, -50%) translateZ(2px) rotate(-5deg) scale(.25);
     opacity: .6;
 }
 .agilidade {
     top: 75%;
     left: 35%;
     -webkit-transform: translate(-50%, -50%) translateZ(1px) rotate(5deg) scale(.25);
-            transform: translate(-50%, -50%) translateZ(1px) rotate(5deg) scale(.25);
+    transform: translate(-50%, -50%) translateZ(1px) rotate(5deg) scale(.25);
     opacity: .3;
 }
 .design {
     top: 40%;
     left: 60%;
     -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(10deg) scale(.25);
-            transform: translate(-50%, -50%) translateZ(2px) rotate(10deg) scale(.25);
+    transform: translate(-50%, -50%) translateZ(2px) rotate(10deg) scale(.25);
     opacity: .6;
 }
 .titulo-principal {
     -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
+    transform-style: preserve-3d;
     position: relative;
 }
 .banner-twitter {
     position: absolute;
     top: 0;
     right: 0;
-
     line-height: 1;
-
+    animation: aparece 0.5s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
     /* largura = 14em */
     /* altura = 3.5em */
     /* tx = .707 * h - .707 * w + w */
     /* ty = -.707 * h */
     -webkit-transform: translate(6.5765em, -2.4745em) rotate(45deg);
-            transform: translate(6.5765em, -2.4745em) rotate(45deg);
+    transform: translate(6.5765em, -2.4745em) rotate(45deg);
     -webkit-transform-origin: 0 0;
-            transform-origin: 0 0;
+    transform-origin: 0 0;
+    transition: 2s;
 
     width: 14em;
     padding: 1em 0;
