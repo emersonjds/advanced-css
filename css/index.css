@@ -16,7 +16,7 @@
     text-align: right;
     display: block;
 }
-.saudacao strong {
+    .saudacao strong {
     font-size: 2em;
     color: #000;
 }
@@ -88,13 +88,24 @@
     color: #FFF;
 }
 .trabalhos ul {
-    overflow: hidden;
+    display: flex;
     border: .5em solid black;
 }
 .trabalhos li {
-    float: left;
-    width: 33.333%;
+    flex: 1;
+    justify-content: space-between;
+     order: 2;
+    transform: scale(1.2)
 }
+
+.trabalhos li:nth-child(2) {
+    order: 1;
+}
+
+.trabalhos li:last-child {
+    order: 3;
+}
+
 .trabalhos img {
     width: 100%;
     display: block;
@@ -145,6 +156,7 @@ body {
     perspective: 6px;
     -webkit-perspective-origin: 50% 160px;
     perspective-origin: 50% 160px;
+    display: block;
 }
 .palavras-home {
     -webkit-transform-style: preserve-3d;
